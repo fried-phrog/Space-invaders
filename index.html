@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="viewpoint", content="width=device-width", initial-scale="1.0">
+        <title>SPACE INVADERS</title>
+        <link rel="icon" type="image/x-icon" href="Images/icon2.ico">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+
+        <!-- JS -->
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <span class="play">
+            <h1>
+                SPACE INVADERS
+            </h1>
+            <canvas id="game"></canvas> <br> <br>
+        </span>
+        <span class="settings hidden">
+            <h1>
+                SETTINGS
+            </h1>
+
+            <p>
+                Change <b>RIGHT</b> button:
+                <button id="rightButton" onclick="ChangeKey(this)">D</button> <br>
+            </p>
+            <p>
+                Change <b>LEFT</b> button:
+                <button id="leftButton" onclick="ChangeKey(this)">A</button> <br>
+            </p>
+            <p>
+                Change <b>SHOOT</b> button:
+                <button id="shootButton" onclick="ChangeKey(this)">SPACE</button> <br>
+            </p>
+
+            <p id="musicVolumeText">
+                Music volume:
+            </p>
+            <input type="range" min="0" max="10" value="2" class="slider" id="musicVolume"> <br> <br> 
+            <p id="sfxVolumeText">
+                SFX volume:
+            </p>
+            <input type="range" min="0" max="10" value="2" class="slider" id="sfxVolume"> <br> <br>
+
+            <p>
+                Difficulty:
+                <button class="difficulty" id="diffEasy" onclick="ChangeKey(this)">EASY</button>
+                <button class="difficulty" id="diffHard" onclick="ChangeKey(this)">HARD</button> <br> <br>
+            </p>
+
+            <!--
+            <p>
+                <button id="clear" onclick="ChangeKey(this)">CLEAR STORAGE</button> <br>
+            </p>
+            -->
+        </span>
+        <span class="hiscores hidden">
+            <h1>
+                HISCORES
+            </h1>
+            <p id="top">
+
+            </p>
+        </span>
+
+        <nav class="navigacija">
+            <ul>
+                <li>
+                    <button class="play" onclick="ChangeMenu(this)">PLAY</button>
+                </li>
+                <li>
+                    <button class="settings" onclick="ChangeMenu(this)">SETTINGS</button>
+                </li>
+
+                <!--
+                <li>
+                    <button class="hiscores" onclick="ChangeMenu(this)">HISCORES</button>
+                </li>
+                -->
+            </ul>
+        </nav>
+
+        <h1 id="endGame">
+
+        </h1>
+    </body>
+
+</html>
